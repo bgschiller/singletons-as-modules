@@ -1,8 +1,5 @@
-CC=gcc
-CFLAGS=-I. -g
-
-fib_example: fib_example.o fib.o vector.o print_fibs.o determine_fib.o
-	$(CC) -o fib_example fib_example.o fib.o vector.o print_fibs.o determine_fib.o
+fib_example: *.cpp *.hpp
+	g++ -o fib_example *.cpp
 
 clean:
 	rm -f *.o fib_example

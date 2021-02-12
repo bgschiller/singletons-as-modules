@@ -1,11 +1,8 @@
-#include "print_fibs.h"
-#include "determine_fib.h"
+#include "print_fibs.hpp"
+#include "determine_fib.hpp"
 #include <stdio.h>
 
 int main() {
-    determine_fib_init();
-    print_fibs_init();
-
     print_fibs_to(10);
     printf("tell me a number and I'll tell you if it's fibonacci: ");
     unsigned int num;
@@ -15,7 +12,5 @@ int main() {
     } else {
         printf("nope, that's not\n");
     }
-    print_fibs_fini();
-    determine_fib_fini();
     return 0;
 }
