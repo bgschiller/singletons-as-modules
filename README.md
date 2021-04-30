@@ -87,6 +87,6 @@ The problem is "I want to run some initialization code before anyone can call th
 - C# has static constructors that run before the first instance of a class is created. It looks like the runtime tracks when these are running to avoid issues with threads (I think. I don't know a lot about C#.)
 - C++ uses the singleton pattern and puts initialization code in the private constructor.
 
-This article being (ostensibly) about the singleton pattern, let's examine the C++ solution to this problem. Take a look at the cpp-fib code. The `determine_fib` and `print_fibs` headers are far simpler—no initialization or finalization code! We were able to get rid of those functions because fibs.hpp is self-sufficient.
+This article being (ostensibly) about the singleton pattern, let's examine the C++ solution to this problem. Take a look at the cpp-fib code. The `determine_fib` and `print_fibs` headers are far simpler—no initialization or finalization code! We were able to get rid of those functions because fibs.hpp itself is responsible for
 
 Not "ensure a class has one instance", but "initialize data once at the start of your program"
